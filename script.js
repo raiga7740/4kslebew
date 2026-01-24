@@ -1,16 +1,15 @@
-/* PARTICLES CONFIG — WHITE, SOFT, FLOATING */
+const isMobile = window.innerWidth < 768;
+
 particlesJS("particles-js", {
   particles: {
     number: {
-      value: 90,
+      value: isMobile ? 45 : 90,
       density: {
         enable: true,
         value_area: 900
       }
     },
-    color: {
-      value: "#ffffff"
-    },
+    color: { value: "#ffffff" },
     opacity: {
       value: 0.25,
       random: true
@@ -21,20 +20,11 @@ particlesJS("particles-js", {
     },
     move: {
       enable: true,
-      speed: 0.6,
+      speed: isMobile ? 0.4 : 0.6,
       direction: "none",
       out_mode: "out"
     },
-    line_linked: {
-      enable: false
-    }
-  },
-  interactivity: {
-    events: {
-      resize: true
-    }
+    line_linked: { enable: false }
   },
   retina_detect: true
 });
-
-console.log("4K Sleeb loaded 🌒");

@@ -40,6 +40,7 @@ body {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.35) contrast(1.15) saturate(1.2);
+  object-position: center;
 }
 
 .hero-bg::after {
@@ -186,4 +187,102 @@ footer {
   padding: 40px;
   font-size: 0.85rem;
   color: #777;
+}
+
+/* RESPONSIF */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 3.2rem;
+    letter-spacing: 3px;
+  }
+
+  .section {
+    padding: 90px 24px;
+  }
+
+  .stats {
+    gap: 24px;
+  }
+
+  .features {
+    gap: 28px;
+  }
+}
+
+/* MOBILE (≤ 768px) */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .cta {
+    padding: 14px 36px;
+    font-size: 0.9rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat {
+    padding: 28px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 32px;
+  }
+
+  .join h2 {
+    font-size: 2.2rem;
+  }
+
+  .join p {
+    font-size: 0.95rem;
+  }
+}
+
+/* SMALL MOBILE (≤ 480px) */
+@media (max-width: 480px) {
+  header {
+    padding: 80px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.1rem;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat h3 {
+    font-size: 1.9rem;
+  }
+
+  .cta {
+    padding: 12px 32px;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
 }
